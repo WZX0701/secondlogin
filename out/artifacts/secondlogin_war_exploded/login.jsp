@@ -7,24 +7,32 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>系统登录</title>
+    <style type="text/css">
+        h1{text-align:center;}
+        body {
+            background-image: url("images/02.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+        a{text-decoration:none;font-size:20px;color:black;}
+        a:hover{text-decoration:underline;font-size:24px;color:red;}
+    </style>
 </head>
 <body>
 <div style="text-align: center;">
-<form action="loginServlet" method="post" style="color: #41b5ff;font-size: 25px">
+<form action="loginServlet" method="get" style="color: blue;font-size: 25px">
+    <h1>用户登录页面</h1>
+    <hr/>
     姓名：<input type="text" id="uname" name="uname" placeholder="请输入用户名"><br>
     密码：<input type="password" id="upwd" name="upwd" placeholder="请输入密码"><br>
-    <button style="color: blue;font-size: 15px">登录</button>
-    <span style="color: #3cff8a;font-size: 12px">${msg}</span>
+        <input type="submit" value="登录"/>
+        <input type="reset" value="重置"/>
+        <a href="register.jsp" target="_blank">注册</a>
+        <span style="color: #3cff8a;font-size: 12px">${msg}</span>
+
 </form>
 </div>
 </body>
-<style>
-    body {
-
-        background-image: url("images/02.jpg");
-        background-size: 100%;
-        background-repeat: no-repeat;
-    }
-</style>
 </html>
